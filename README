@@ -1,0 +1,53 @@
+ortal.netzer
+312416845
+ortal glatt
+
+
+=============================
+=  README for ex11:   =
+=============================
+
+
+==================
+=  Description:  =
+==================
+In this exercise, we built classes of nodes, records and tree diagnoses.
+We also build an example of a decision tree that diagnose illnesses due to the
+symptoms.
+
+* The Node class:
+Attributes: data, positive child, negative child.
+The class contains "get" and "set" functions.
+
+* The Record class:
+Attributes: illness and symptoms.
+The class contains "get" functions.
+
+* The Diagnoser class:
+Attributes: roote.
+functions in the class -
+ - "get_root"
+ - "diagnose": Gets a list of symptoms and diagnoses which illness feats the
+   symptoms according to the tree, by using the "diagnose_helper" function.
+ - "calculate_success_rate" - Gets a list of records, calculates the success
+   rate of the tree, by checking if the record's symptoms lead the path in the
+   tree to the record's illness, and returns the success rate.
+ - "all_illnesses" - Returns a sorted list of all the illnesses in the tree, by
+   using the "all_illnesses_helper" function.
+ - "most_rare_illness" - Gets a list of records, and returns the most rare
+   illness by checking how many records lead to each illness.
+ - "paths_to_illness" - Gets an illness and returns a list of all the paths
+   that will bring you to the illness, by using the "paths_to_illness_helper".
+
+* "build_tree" function:
+  Gets a list of symptoms and a list of records, and builds a tree with all the
+  symptoms, that will bring you to the illness that you have the most chances
+  to have.
+  This function uses the "build_tree_helper" to build the tree, and the
+  "choose_illness" and "does record_feat" functions to choose the illness in
+  every leave in the tree.
+
+* "optimal_tree" function:
+  Gets a list of records, a list of symptoms and a depth (int), builds trees of
+  all the symptoms' sets that their size is the given depth and return the root
+  of the optimal tree (the tree with the highest success rate).
